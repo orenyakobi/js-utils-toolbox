@@ -7,6 +7,6 @@ Useful copy &amp; paste util functions written in vanilla JS - Continiously grow
 ```javascript
 if (location.protocol != 'https:')
 {
- location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
 }
 ```
