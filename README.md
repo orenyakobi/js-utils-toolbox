@@ -1,7 +1,7 @@
 # js-utils-toolbox
 Useful copy &amp; paste util functions written in vanilla JS
 
-Enforsing HTTPS
+__Enforsing HTTPS__
 ```javascript
 if (location.protocol != 'https:')
 {
