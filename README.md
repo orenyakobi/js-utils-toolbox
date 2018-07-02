@@ -19,7 +19,7 @@ function isDefined(obj, path) {
   let pathItems = path.split('.');
 
   for (let i = 0; i < pathItems.length; i++) {
-    if (!obj || !obj.hasOwnProperty(pathItems[i])) {
+    if (!obj || !obj[pathItems[i]]) {
       return false;
     }
     obj = obj[pathItems[i]];
