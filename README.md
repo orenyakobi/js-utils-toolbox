@@ -1,12 +1,29 @@
 # js-utils-toolbox
 Useful copy &amp; paste util functions written in vanilla JS - Continiously grow and maintained.
 
-* [Enforcing HTTPS](#enforcing-https)
+* [Enforcing HTTPS](#enforce-https)
+* [Checking the existence of a nested object key](#is-defined)
 
-# <a name="enforcing-https"></a>Enforcing HTTPS
+# <a name="enforce-https"></a>Enforcing HTTPS
 ```javascript
-if (location.protocol != 'https:')
-{
-  location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+function enforceHTTPS(){
+  if (location.protocol != 'https:'){
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  }
+}
+```
+
+# <a name="is-defined"></a>Checking the existence of a nested object key
+```javascript
+function isDefined(obj, path) {
+  var pathItems = path.split('.');
+
+  for (var i = 0; i < pathItems.length; i++) {
+    if (!obj || !obj.hasOwnProperty(pathItems[i])) {
+      return false;
+    }
+    obj = obj[pathItems[i]];
+  }
+  return true;
 }
 ```
