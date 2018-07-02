@@ -16,9 +16,9 @@ function enforceHTTPS(){
 # <a name="is-defined"></a>Checking the existence of a nested object key
 ```javascript
 function isDefined(obj, path) {
-  var pathItems = path.split('.');
+  let pathItems = path.split('.');
 
-  for (var i = 0; i < pathItems.length; i++) {
+  for (let i = 0; i < pathItems.length; i++) {
     if (!obj || !obj.hasOwnProperty(pathItems[i])) {
       return false;
     }
